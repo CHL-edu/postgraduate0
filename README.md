@@ -1,6 +1,6 @@
 # postgraduate0
 
-This is a libraryPersonal Utility Library.
+This is a Personal Utility Library.
 
 Disclaimer for Personal GitHub Repository
 
