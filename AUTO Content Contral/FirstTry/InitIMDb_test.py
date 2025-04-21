@@ -2,13 +2,10 @@
 from google.colab import drive
 drive.mount('/content/drive')
 
-# 安装必要的依赖（若尚未安装）
-!pip install transformers torch
-
 # 导入库
 import torch
 from transformers import BertTokenizer, BertForSequenceClassification
-
+from googletrans import Translator
 # 定义模型和分词器保存路径
 model_save_path = '/content/drive/MyDrive/Colab Notebooks/BERT/IMDb/InitModal'
 
@@ -65,16 +62,13 @@ def predict_sentiment(text, max_length=512):
         "negative_prob": float(probabilities[0])   # 负面概率
     }
 
-# 示例调用
-test_texts = [
-    "This movie was absolutely fantastic! I loved every minute of it.",
-    "The film was boring and poorly acted. A complete waste of time.",
-    "The plot was okay, but the characters were not very engaging."
-]
+user_input = input("请输入要分析的文本：")
+text_zh = user_input
+translator = Translator()
+translation = translator.translate(text_zh, dest='en')  # 翻译成英文
+test_texts = translation.text  # 获取翻译后的文本字符串
 
-for text in test_texts:
-    result = predict_sentiment(text)
-    print("输入文本:", result["text"])
-    print("预测情感:", result["sentiment"])
-    print(f"正面概率: {result['positive_prob']:.4f}, 负面概率: {result['negative_prob']:.4f}")
-    print("-" * 50)
+result = predict_sentiment(test_texts)
+print("输入文本:", result["text"])
+print("预测情感:", result["sentiment"])
+print(f"正面概率: {result['positive_prob']:.4f}, 负面概率: {result['negative_prob']:.4f}")
