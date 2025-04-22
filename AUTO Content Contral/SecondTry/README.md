@@ -1,3 +1,3 @@
-#CONTRIBUTION
+# CONTRIBUTOR
 
 lysandre hi@lysand.re
