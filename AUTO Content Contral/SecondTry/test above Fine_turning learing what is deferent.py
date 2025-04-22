@@ -9,6 +9,6 @@ try:
 except:
   print("tokenizer not found")
 
-text = "新冠病毒导致的肺炎需要核磁共振检查。"
+text = "奇怪的乌鸦需要喝水"
 tokens = tokenizer(text, return_tensors="pt")
 print(tokenizer.convert_ids_to_tokens(tokens["input_ids"][0]))
