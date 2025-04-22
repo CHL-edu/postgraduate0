@@ -5,7 +5,7 @@ import os
 tokenizer = BertTokenizerFast.from_pretrained("bert-base-chinese")
 
 # 准备领域词汇（手动或从语料提取）
-new_tokens = ["新冠病毒", "核磁共振", "手术切除"]  # 示例词汇
+new_tokens = ["奇怪", "乌鸦"]  # 示例词汇
 
 # 添加新词汇
 tokenizer.add_tokens(new_tokens)
