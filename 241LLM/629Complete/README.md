@@ -205,4 +205,4 @@ python A3C627.py --debug
 ## 🙏 致谢
 
 - author Xiaoliang Chen, xlichen@ucdavis.edu
-- copyright NGNS lab @ucdavis
+- NGNS lab @ucdavis
