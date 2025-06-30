@@ -140,6 +140,7 @@ http://localhost:6006
 - **平均奖励**: > 900
 - **收敛时间**: 通常在1,000-15,000回合
 - **最终效果**: 通常在BP=0.1-，reward=800+早停
+- ![training_log_PPO](https://github.com/user-attachments/assets/43920f10-60ee-4666-bc04-bdeff45ba14c)
 
 ## 🧪 算法详解
 
