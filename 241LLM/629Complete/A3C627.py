@@ -72,8 +72,8 @@ class ConfigManager:
 
         # 路径配置
         self.config['paths'] = {
-            'output_dir': '/data/chl/pyproject/DeepRSA/output3/',
-            'candidate_paths_file': '/data/chl/pyproject/DeepRSA/Src_Dst_Paths.dat'
+            'output_dir': './output/',
+            'candidate_paths_file': './Src_Dst_Paths.dat'
         }
 
     def get_config(self) -> Dict:
